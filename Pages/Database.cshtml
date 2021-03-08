@@ -1,0 +1,78 @@
+﻿@page
+@model RazorPagesUI.Pages.DatabaseModel
+@{
+    ViewData["Title"] = "Add Products";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Want to add a new product? Fill in a row below and submit!</p>
+
+<form id="form1" runat="server">
+    <div class="container">
+        <h2>Database</h2>
+        <table class="table" id="maintable">
+            <thead>
+                <tr>
+                    <th>Medication</th>
+                    <th>Symptoms/Condition</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="subjects">
+                    <td>
+                        <input type="text" name="medication" class="form-control medication01" />
+                    </td>
+                    <td>
+                        <input type="text" name="symptom" class="form-control symptom01" />
+                    </td>
+                    <td>
+                        <input type="text" name="date" class="form-control date01" />
+                    </td>
+                    <td>
+                        <button type="button" id="btnAdd" class="btn btn-xs btn-primary classAdd" onclick = "addField();">Add More</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" id="btnSubmit" class="btn btn-primary btn-md pull-right btn-sm" >Submit</button>
+    </div>
+</form>
+
+<script>
+    function addField(argument) {
+        var myTable = document.getElementById("maintable");
+        var currentIndex = myTable.rows.length;
+        var currentRow = myTable.insertRow(-1);
+
+        var linksBox = document.createElement("input");
+        linksBox.setAttribute("name", "medication" + currentIndex);
+        linksBox.setAttribute("type", "text");
+        linksBox.setAttribute("class", "form-control medication01");
+
+        var keywordsBox = document.createElement("input");
+        keywordsBox.setAttribute("name", "symptom" + currentIndex);
+        keywordsBox.setAttribute("type", "text");
+        keywordsBox.setAttribute("class", "form-control symptom01");
+
+        var violationsBox = document.createElement("input");
+        violationsBox.setAttribute("name", "date" + currentIndex);
+        violationsBox.setAttribute("type", "text");
+        violationsBox.setAttribute("class", "form-control date01");
+
+        var addRowBox = document.createElement("input");
+        addRowBox.setAttribute("type", "button");
+        addRowBox.setAttribute("id", "btnAdd");
+        addRowBox.setAttribute("onclick", "addField();");
+
+        var currentCell = currentRow.insertCell(-1);
+        currentCell.appendChild(linksBox);
+
+        currentCell = currentRow.insertCell(-1);
+        currentCell.appendChild(keywordsBox);
+
+        currentCell = currentRow.insertCell(-1);
+        currentCell.appendChild(violationsBox);
+
+    }
+</script>

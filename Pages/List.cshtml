@@ -1,0 +1,65 @@
+﻿@page
+@model ListModel
+@{
+    ViewData["Title"] = "List of Products";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Here are a list of products based on categories.</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-image">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Product Detail</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Date Added</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td class="w-25">
+                            <img src="https://www.cardinalhealth.com/content/dam/corp/products/professional-products/category-grid-asset/CategoryFeatured-AS-HPL-Family.jpg" class="img-fluid img-thumbnail" alt="HydrogenPeroxide">
+                        </td>
+                        <td><b>Hydrogen Peroxide</b>: Mild first aid used on the skin to help prevent infection of minor cuts, scrapes, and burns. </td>
+                        <td>Antiseptics</td>
+                        <td>3/7/21</td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td class="w-25">
+                            <img src="https://www.cardinalhealth.com/content/dam/corp/products/professional-products/category-grid-asset/CategoryFeatured-AS-4CHG-Family.jpg" class="img-fluid img-thumbnail" alt="HydrogenPeroxide">
+                        </td>
+                        <td><b>Chlorhexidine Gluconate</b>: Antiseptic for use as surgical hand scrub, patient preoperative skin perparation, and skin wounds/cleansing.. </td>
+                        <td>Antiseptics</td>
+                        <td>3/7/21</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td class="w-25">
+                            <img src="https://www.cardinalhealth.com/content/dam/corp/products/professional-products/category-grid-asset/category-featured/grid-square-2D72NT55-double-glove-2D73EB55.jpg" class="img-fluid img-thumbnail" alt="Gloves">
+                        </td>
+                        <td><b>Latex Gloves</b>: Helps act as a protective barrier to prevent possible transmission of diseases between healthcare workers and patients, during the surgical operation, and features an interlocking, beaded cuff design. </td>
+                        <td>Surgical Gloves</td>
+                        <td>3/7/21</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td class="w-25">
+                            <img src="https://www.cardinalhealth.com/content/dam/corp/products/professional-products/category-grid-asset/icon/grid-square-2D73EB55.jpg" class="img-fluid img-thumbnail" alt="Gloves">
+                        </td>
+                        <td><b>Synthetic Gloves</b>: Helps act as a protective barrier to prevent possible transmission of diseases between healthcare workers and patients, during the surgical operation, and allows for natural movement in the fingers, thumb, and palm with proprietary hand mold. </td>
+                        <td>Surgical Gloves</td>
+                        <td>3/7/21</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
